@@ -1,0 +1,28 @@
+//
+//  屏幕适配.pch
+//  屏幕适配
+//
+//  Created by 刘渊 on 2017/8/21.
+//  Copyright © 2017年 刘渊. All rights reserved.
+//
+
+#define LYHeight [UIScreen mainScreen].bounds.size.height
+#define LYWidth  [UIScreen mainScreen].bounds.size.width
+
+//以iphone5上长宽作为基数
+#define LYiphone5W 320.0
+#define LYiphone5H 568.0
+
+//x 比例 1.293750  在iphone7屏幕   大屏图片可以适配小屏幕
+#define LYScaleX LYWidth / LYiphone5W
+//y比例  1.295775
+#define LYScaleY LYHeight / LYiphone5H
+
+//x坐标 y坐标
+#define LineX(l) l*LYScaleX
+#define LineY(l) l*LYScaleY
+
+#define Font(x) [UIFont systemFontOfSize:x*LYScaleX]
+
+
+
